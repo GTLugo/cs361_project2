@@ -36,6 +36,7 @@ namespace gtl {
     [[nodiscard]] bool repairable() const { return repairable_; }
     [[nodiscard]] i32 priority() const { return priority_; }
     [[nodiscard]] const std::vector<Part>& parts() const { return parts_; }
+    [[nodiscard]] std::vector<Part>& parts() { return parts_; }
 
     void setType(Type type) { type_ = type; }
     void setPriority(i32 priority) { priority_ = priority; }

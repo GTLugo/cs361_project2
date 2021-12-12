@@ -12,6 +12,8 @@ namespace gtl {
       generateVehicles(vehicleCount);
 
       repairVehicles();
+
+      testVehicles();
     });
 
     std::cout << "-----------------------------\n";
@@ -71,6 +73,26 @@ namespace gtl {
         testingZone_.push_back(bay);
         std::cout << "> Fully Repaired Bay " << i << ": " << bay << "\n";
         bay.setType(Vehicle::None);
+      }
+    }
+  }
+
+  void Simulation::testVehicles() {
+    std::cout << "Test Vehicles:\n";
+    for (auto it = testingZone_.begin(); it != testingZone_.end();) {
+      if (Chance::flip()) {
+        std::cout << "> Passed Test: " << *it << "\n";
+        it = testingZone_.erase(it);
+      } else {
+        for (auto& p : it->parts()) {
+          p.broken = Chance::flip();
+        }
+        waitingVehicles_.push(*it);
+        std::cout << "> Failed Test: " << *it << "\n";
+      }
+
+      if (it != testingZone_.end()) {
+        ++it;
       }
     }
   }

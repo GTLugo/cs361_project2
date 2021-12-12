@@ -16,7 +16,7 @@ namespace gtl {
     bool shouldStop_{false};
     fge::Time time_{10.};
     u32 timeStep_{1};
-    u32 maxTimeStep_{50};
+    u32 maxTimeStep_{100};
 
     // Sim specific
     float avgVehicles_{3};
@@ -30,6 +30,7 @@ namespace gtl {
 
     void generateVehicles(i32 count);
     void repairVehicles();
+    void testVehicles();
 
     void fixedUpdateLoop(const std::function<void()>& action);
   };

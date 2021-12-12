@@ -10,7 +10,7 @@ namespace gtl {
     for (auto& part : parts_) {
       auto it = std::find(parts.begin(), parts.end(), part);
       if (part.broken && it != parts.end()) {
-//        std::cout << "> Fixed part!\n";
+        //        std::cout << "> Fixed part!\n";
         part.broken = false;
         parts.erase(it);
         return true;
