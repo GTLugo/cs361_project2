@@ -14,9 +14,11 @@
 #include <cmath>
 #include <random>
 
+#include <string>
 #include <array>
 #include <vector>
 #include <queue>
+#include <map>
 
 #include <sstream>
 #include <iostream>

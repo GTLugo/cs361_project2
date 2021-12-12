@@ -7,5 +7,5 @@ namespace gtl {
   using u64 = std::uint64_t;
 }
 
-#include "util/dice.hpp"
+#include "util/chance.hpp"
 #include "util/time.hpp"

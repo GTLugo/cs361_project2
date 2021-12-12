@@ -16,7 +16,7 @@ set(SOURCE_FILES
     src/main.cpp
     src/core/simulation.cpp
     src/core/vehicle.cpp
-    )
+    src/core/supply_depot.cpp src/core/supply_depot.hpp src/core/part.hpp)
 
 # ===================================================
 # ADD EXECUTABLE TARGET
